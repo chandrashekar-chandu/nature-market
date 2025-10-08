@@ -12,8 +12,7 @@ services:
 
   - type: web
     name: nature-market-frontend
-    env: node
+    env: static
     plan: free
     buildCommand: cd frontend && npm install && npm run build
-    startCommand: npx serve -s frontend/build
     staticPublishPath: frontend/build
