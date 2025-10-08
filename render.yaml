@@ -2,7 +2,6 @@ services:
   - type: web
     name: nature-market-backend
     env: node
-    plan: free-web-services
     buildCommand: cd backend && npm install
     startCommand: cd backend && npm start
     autoDeploy: true
@@ -13,6 +12,5 @@ services:
   - type: web
     name: nature-market-frontend
     env: static
-    plan: free-static-sites
     buildCommand: cd frontend && npm install && npm run build
     staticPublishPath: frontend/build
