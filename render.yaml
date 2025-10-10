@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: nature-market-backend
+    env: node
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 3000
+
+  - type: web
+    name: nature-market-frontend
+    env: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/build
